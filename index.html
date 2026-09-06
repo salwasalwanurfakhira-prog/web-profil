@@ -3,57 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya - Salwa Nur Fakhira</title>
-
-<link rel="stylesheet" href="CSS/style.css">
-    </head>
+    <title>Profil Saya</title>
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 <body>
 
     <div class="container">
-        <!-- Bagian Header / Nama -->
-        <h1>Halo, Saya Salwa Nur Fakhira </h1>
-        
-        <hr>
+        <!-- Menu Navigasi -->
+        <nav class="navbar">
+            <button class="nav-btn active" onclick="switchPage('beranda', this)">Beranda</button>
+            <button class="nav-btn" onclick="switchPage('sertifikat', this)">Sertifikat</button>
+            <button class="nav-btn" onclick="switchPage('galeri', this)">Galeri</button>
+        </nav>
 
-        <!-- Bagian Foto Profil -->
-        <div class="profile-img-container">
-            <!-- Pastikan nama file gambar sesuai dengan yang ada di dalam folder project kamu -->
-            <img src="c:\Users\HYPE\Pictures\Camera Roll\06.jpeg"alt="06.jpeg">
+        <!-- Halaman Beranda -->
+        <div id="beranda" class="page active-page">
+            <div class="profile-container">
+                <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-pic">
+            </div>
+            <div>
+                <h2>✨ Tentang Saya</h2>
+                <p>Selamat datang di halaman website saya! Saya adalah seorang pelajar dari <strong>SMKN 3 SOPPENG</strong>. Saat ini sedang mendalami ilmu pembuatan website mulai dari dasar HTML, CSS, hingga publikasi menggunakan GitHub.</p>
+                <p class="quote">Belajar adalah proses seumur hidup, dan membagikan ilmu adalah cara terbaik untuk terus berkembang! 🌟</p>
+            </div>
         </div>
 
-        <!-- Bagian Teks Perkenalan -->
-        <h2>Tentang Saya</hc:\Users\HYPE\Pictures\Camera 
-        </p>
-            Saya adalah seorang pelajar yang senang belajar,bertumbuh,dan mengejar mimpi.percaya bahwa setiap langkah kecil hari ini adalah awal dari sesuatu yang  besar di masa depan 
+        <!-- Halaman Sertifikat -->
+        <div id="sertifikat" class="page">
+            <h2>📜 Sertifikat Saya</h2>
+            <p>h.</p>
+        </div>
 
-        </p>  
-        <p>
-            Saya percaya bahwa belajar adalah proses seumur hidup, dan membagikan ilmu adalah cara terbaik untuk terus berkembang. 
-        </p>
-
-        <hr>
-
-                            <!-- Bagian Link Sosial Media -->
-                              <h2>temukan saya di sini !</h2>
-                            <ul class="social-link">
-            <li>
-                <a    href="https://www.instagram.com/slwanurfakhira" target="_blank">Kunjungi Instagram Saya</a>
-            </li>
-            <li>
-                <a    href="https://linkedin.com/" target="_blank">Profil LinkedIn Saya</a>
-            </li> 
-            <li>
-                <a    href=":salwasalwanurfakhira@gmail.com">Kirim Email ke Saya</a>
-            </li>
-        </ul>
-
-        <hr>
-
-        <!-- Bagian Footer (Catatan Kaki) -->
-        <footer>
-            <p><i>XI TKJ 3.</i></p>
-        </footer>
+        <!-- Halaman Galeri -->
+        <div id="galeri" class="page">
+            <h2></h2>
+            <p.</p>
+        </div>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+        function switchPage(pageId, element) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active-page'));
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(pageId).classList.add('active-page');
+            element.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
